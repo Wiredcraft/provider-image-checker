@@ -13,10 +13,10 @@ class ImageList(object):
         self.provider = provider
         self.images = self.get_filtered_image_list()
 
-    """
-    Downloads a list of all images from the provider
-    """
     def get_image_list(self):
+        """
+        Downloads a list of all images from the provider
+        """
         provider = self.provider
         config = self.config
         cls = get_driver(provider)
@@ -28,12 +28,12 @@ class ImageList(object):
             driver = cls(key)
         return driver.list_images()
 
-    """
-    Downloads a list of all images from the provider,
-    then filters them based on the regexes defined for 
-    this provider in the configuration file.
-    """
     def get_filtered_image_list(self):
+        """
+        Downloads a list of all images from the provider,
+        then filters them based on the regexes defined for 
+        this provider in the configuration file.
+        """
         image_list = self.get_image_list()
         provider = self.provider
         images = {}

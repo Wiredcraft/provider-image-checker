@@ -14,20 +14,20 @@ class ImageChecker(object):
         self.providers = self.config.get_providers()
         self.image_lists = self.get_image_lists()
 
-    """
-    Loads the image lists for each provider.
-    """
     def get_image_lists(self):
+        """
+        Loads the image lists for each provider.
+        """
         image_lists = {}
         for provider in self.providers:
             image_lists[provider] = ImageList(provider).images
         return image_lists
 
-    """ 
-    Writes all image names and id's to a json file, 
-    sorted by provider.
-    """
     def write_to_file(self):
+        """ 
+        Writes all image names and id's to a json file, 
+        sorted by provider.
+        """
         filename = self.config.get_filename()
         out = open(filename, 'w')
         json_string = json.dumps(self.image_lists, indent=4)
