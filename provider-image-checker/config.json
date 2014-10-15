@@ -1,0 +1,19 @@
+{
+    "filename": "images.txt",
+    "providers": {
+        "digitalocean": {
+            "api_key": "1ccb5e1e2a289cff57f4d0e034489628",
+            "client_id": "33500367f757d2ac5a1981cb83be37ba",
+            "filters": [
+                "Ubuntu 14.04"
+            ]
+        },
+        "linode": {
+            "api_key": "gcNs8PqOds4kQH0fRscXOsZNL5BJNl363Vxu1mDHLMaYpWLAqkYjRrKdGjnNsXG8",
+            "client_id": "",
+            "filters": [
+                "Ubuntu 14.04"
+            ]
+        }
+    }
+}
