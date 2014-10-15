@@ -5,7 +5,9 @@ class Config:
     Handles the config.json file
     """
     def __init__(self):
-        self.config = json.load(open("config.json"))
+        config_file = open("config.json")
+        self.config = json.load(config_file)
+        config_file.close()
 
     def get_providers(self):
         return [provider for provider in self.config['providers']]
@@ -24,6 +26,9 @@ class Config:
 
     def get_filename(self):
         return self.config['filename']
+
+    def get_diff_filename(self):
+        return self.config['diff_filename']
 
 
 _config = Config()

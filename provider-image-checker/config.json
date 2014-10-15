@@ -1,5 +1,6 @@
 {
     "filename": "images.txt",
+    "diff_filename": "diff.txt",
     "providers": {
         "digitalocean": {
             "api_key": "1ccb5e1e2a289cff57f4d0e034489628",
