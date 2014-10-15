@@ -3,7 +3,7 @@ from libcloud.compute.providers import get_driver
 from config import get_config
 import re
 
-class ImageList:(object)
+class ImageList(object):
     """
     Downloads a list of images from the selected provider and
     stores the filtered image list in a dictionary.
@@ -12,7 +12,6 @@ class ImageList:(object)
         self.config = get_config()
         self.provider = provider
         self.images = self.get_filtered_image_list()
-        print self.images
 
     """
     Downloads a list of all images from the provider

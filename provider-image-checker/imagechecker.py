@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from config import get_config
 from imagelist import ImageList
 import json, os.path
@@ -32,4 +34,8 @@ class ImageChecker(object):
         out.write(json_string)
         out.close()
 
-ImageWatcher().write_to_file()
+def main():
+    ImageChecker().write_to_file()
+
+if __name__ == "__main__":
+    main()
