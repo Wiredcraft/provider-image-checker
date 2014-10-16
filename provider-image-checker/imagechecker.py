@@ -29,7 +29,7 @@ class ImageChecker(object):
         sorted by provider.
         """
         filename = self.config.get_filename()
-        out = open(os.path.join(os.path.dirname(__file__), filename), 'w')
+        out = open(filename, 'w')
         json_string = json.dumps(self.image_lists, indent=4)
         out.write(json_string)
         out.close()
