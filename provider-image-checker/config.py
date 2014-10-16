@@ -1,11 +1,12 @@
 import json
+import os.path
 
 class Config:
     """
     Handles the config.json file
     """
     def __init__(self):
-        config_file = open("config.json")
+        config_file = open(os.path.join(os.path.dirname(__file__), "config.json"))
         self.config = json.load(config_file)
         config_file.close()
 

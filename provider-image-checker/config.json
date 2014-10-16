@@ -3,15 +3,15 @@
     "diff_filename": "diff.txt",
     "providers": {
         "digitalocean": {
-            "api_key": "1ccb5e1e2a289cff57f4d0e034489628",
-            "client_id": "33500367f757d2ac5a1981cb83be37ba",
+            "api_key": "Your api key goes here",
+            "client_id": "Your client id goes here",
             "filters": [
                 "Ubuntu 14.04"
             ]
         },
         "linode": {
-            "api_key": "gcNs8PqOds4kQH0fRscXOsZNL5BJNl363Vxu1mDHLMaYpWLAqkYjRrKdGjnNsXG8",
-            "client_id": "",
+            "api_key": "Api key here",
+            "client_id": "Leave this string empty, linode does not use client id",
             "filters": [
                 "Ubuntu 14.04"
             ]
