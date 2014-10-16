@@ -26,6 +26,18 @@ class ImageChecker(object):
             image_lists[provider] = ImageList(provider).images
         return image_lists
 
+    def get_old_image_lists(self):
+        """
+        Reads the previous image list from a file, if such a file exists.
+        """
+        filename = self.config.get_filepath()
+        if not os.path.isfile(filename):
+            return None
+        f = open(filename)
+        old_image_lists = json.load(f)
+        f.close()        
+        return old_image_lists
+
     def write_to_file(self):
         """ 
         Writes all image names and id's to a json file, 
@@ -57,15 +69,6 @@ class ImageChecker(object):
             out.write(json_string)
             out.close()    
 
-    def get_old_image_lists(self):
-        filename = self.config.get_filepath()
-        if not os.path.isfile(filename):
-            return None
-        f = open(filename)
-        old_image_lists = json.load(f)
-        f.close()        
-        return old_image_lists
-
     def get_diff(self):
         """
         Get the difference between the current list of images and
@@ -83,7 +86,9 @@ class ImageChecker(object):
     def get_provider_diff(self, provider):
         """
         Gets the difference between the current list of images and 
-        the previous list for a single provider.
+        the previous list for a single provider as a dictionary, where 
+        each image id is stored in a list under the keys 'added', 'deleted'
+        or 'modified', depending on the diff.
         """
         if not provider in self.old_image_lists or not provider in self.image_lists: 
             #This is a config diff, ignore
