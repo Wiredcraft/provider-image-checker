@@ -2,7 +2,7 @@
 
 from config import get_config
 from imagelist import ImageList
-import json, os.path
+import json
 
 class ImageChecker(object):
     """
