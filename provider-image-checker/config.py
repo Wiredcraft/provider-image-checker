@@ -25,8 +25,11 @@ class Config(object):
     def get_filters(self, provider):
         return self.get_provider_config(provider)['filters']
 
-    def get_filename(self):
-        return self.config['filename']
+    def get_filepath(self):
+        return os.path.join(self.get_file_directory(), 'images.json')
+
+    def get_file_directory(self):
+        return self.config['file_directory']
 
     def get_diff_directory(self):
         return self.config['diff_directory']

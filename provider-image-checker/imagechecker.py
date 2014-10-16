@@ -31,7 +31,7 @@ class ImageChecker(object):
         Writes all image names and id's to a json file, 
         sorted by provider.
         """
-        filename = self.config.get_filename()
+        filename = self.config.get_filepath()
         out = open(filename, 'w')
         json_string = json.dumps(self.image_lists, indent=4)
         out.write(json_string)
@@ -58,7 +58,7 @@ class ImageChecker(object):
             out.close()    
 
     def get_old_image_lists(self):
-        filename = self.config.get_filename()
+        filename = self.config.get_filepath()
         if not os.path.isfile(filename):
             return None
         f = open(filename)

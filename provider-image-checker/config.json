@@ -1,5 +1,5 @@
 {
-    "filename": "images.txt",
+    "file_directory": ".",
     "diff_directory": ".",
     "providers": {
         "digitalocean": {
