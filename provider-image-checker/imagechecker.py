@@ -9,7 +9,8 @@ import datetime
 class ImageChecker(object):
     """
     Downloads a list of images and image id's for all providers,
-    and writes it to a JSON file.
+    and compares it to previous values. If anything has changed,
+    the difference will be written to a JSON file.
     """
     def __init__(self):
         self.config = get_config()
