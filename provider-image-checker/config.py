@@ -1,7 +1,7 @@
 import json
 import os.path
 
-class Config:
+class Config(object):
     """
     Handles the config.json file
     """
