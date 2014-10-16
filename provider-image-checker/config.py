@@ -28,9 +28,6 @@ class Config:
     def get_filename(self):
         return self.config['filename']
 
-    def get_diff_filename(self):
-        return self.config['diff_filename']
-
 
 _config = Config()
 
