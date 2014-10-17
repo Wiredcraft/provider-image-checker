@@ -24,6 +24,10 @@ To add a provider to check for images, edit config.json to add the provider name
 - *client_id:* Your client id. Some providers do not use a client id. In that case use an empty string for this field.
 - *filters:* A list of regular expressions to filter out the desired images.
 
+### Additional options
+
+*file_directory:* Change this field in config.json to specify where the downloaded image list wil be saved. The list is saved in JSON format, in a file named *images.json*.
+
 
 
 
