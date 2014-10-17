@@ -3,8 +3,7 @@ provider-image-checker
 
 Check images offered by various cloud providers and detect changes.
 
-How to use
-============
+### How to use
 
 Make sure that Libcloud is installed
 ```bash
